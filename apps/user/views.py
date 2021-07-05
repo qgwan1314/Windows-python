@@ -33,6 +33,8 @@ class UserViewSet(viewsets.ModelViewSet):
 class GroupViewSet(viewsets.ModelViewSet):
     """
     允许组查看或编辑的API路径。
+
+    
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
