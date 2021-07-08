@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ba950017-6e71-4b92-8b8d-d1d83eb84498" name="wq" url="http://1.116.112.15">
+        <fileTransfer host="1.116.112.15" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+    <groups>
+      <group>
+        <name>wqqq</name>
+      </group>
+    </groups>
+  </component>
+</project>

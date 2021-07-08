@@ -1,0 +1,7 @@
+settings.py
+setup.py
+apmonitor.egg-info/PKG-INFO
+apmonitor.egg-info/SOURCES.txt
+apmonitor.egg-info/dependency_links.txt
+apmonitor.egg-info/requires.txt
+apmonitor.egg-info/top_level.txt
