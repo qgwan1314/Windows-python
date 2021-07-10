@@ -12,12 +12,14 @@ def custom_exception_handler(exc, context):
     if response is not None:
         data = {
             'code': response.status_code,
-            'msg': str(exc),
+            'status':False,
+            'message': str(exc),
         }
         return Response(data=data, status=response.status_code)
     else:
         data = {
              'code': 400,
-             'msg': str(exc),
+             'status': False,
+             'message': str(exc),
         }
         return Response(data=data, status=400)

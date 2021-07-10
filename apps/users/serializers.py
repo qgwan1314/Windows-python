@@ -11,13 +11,13 @@ def check_username(username):
 class UserListSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username', 'email', 'is_superuser', 'date_joined']  # 所有
+        # fields = ['username', 'email', 'is_superuser', 'date_joined']  # 所有
+        fields = '__all__' # 所有
         depth = 2
         # fields=('id','username')#自定义序列化器很繁琐
         extra_kwargs = {
             'username': {'read_only': True},
             'date_joined': {'read_only': True}
-
         }
 
     # 编辑时加密

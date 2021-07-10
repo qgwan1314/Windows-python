@@ -50,6 +50,10 @@ INSTALLED_APPS = [
     'apps.users',
     'apps.logs',
     'apps.login',
+    'apps.mgrs',
+    'apps.devices',
+    'apps.entryperson',
+    'apps.environs',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    #'utils.middlewares.ResponseMiddlewares.ResponseMiddleware',
+    'utils.middlewares.ResponseMiddlewares.ResponseMiddleware',
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
@@ -151,7 +155,7 @@ REST_FRAMEWORK = {  # 是一个字典 key-value
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ),
-    #'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler.custom_exception_handler',
+    'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler.custom_exception_handler',
 }
 
 # python manage.py createsuperuser创建管理远远账户
@@ -189,7 +193,7 @@ def jwt_response_pay1oad_handler(token, user=None, request=None): # +
     return {
     'token': token ,
     ' username' :user.username ,
-    'first_ name': user. first_name
+    'first_ name': user.first_name
     }
 import datetime
 JWT_AUTH = {

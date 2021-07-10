@@ -20,7 +20,10 @@ schema_url_patterns = [
     # jwt登陆认证
     # path('login/', obtain_jwt_token),
     path('users/', include('apps.users.urls', namespace='users'), name='用户模块'),
-    path('login/', include('apps.login.urls', namespace='login'))
+    path('login/', include('apps.login.urls', namespace='login')),
+    path('mgrs/', include('apps.mgrs.urls', namespace='mgrs')),
+    path('devices/', include('apps.devices.urls', namespace='devices')),
+
 ]
 
 urlpatterns += schema_url_patterns
